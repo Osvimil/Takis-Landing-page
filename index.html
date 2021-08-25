@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="takis.css">
+    <title>Takis Landing page</title>
+</head>
+<body>
+    <section>
+
+        <div class="circle"></div>
+
+        <header>
+
+            <a href="#"> <img src="img/logo_barcel.png" class="logo"></a>
+            <div class="toggle" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">+ Productos</a></li>
+                <li><a href="#">Coming</a></li>
+                <li><a href="#">Sucursales</a></li>
+            </ul>
+
+        </header>
+
+        <div class="content">
+            <div class="textbox">
+
+                <h2>Hola Somos Barcel propiedad de Bimbo Sa de CV <br> y los <span>Takis</span> saben ricos</h2>
+                <p>Nuestra historia se remonta desde el siglo pasado como La botanera,
+                    sin embargo, nuestra expansión hacia otras fronteras se dio en los años 90.
+                </p>
+                <a href="#">Visitar Bimbo</a>
+            </div>
+
+            <div class="imgbox">
+                <img src="img/takis_fuego.png" class="takis">
+            </div>
+        </div>
+
+        <ul class="thumb">
+            <li><img src="img/takis_fuego.png" alt="" class="max" onclick="imgSlider('img/takis_fuego.png'); cambiarColorCirculo('#5e1a8d');"></li>
+            <li><img src="img/takis_huakamole.png" alt="" class="max" onclick="imgSlider('img/takis_huakamole.png'); cambiarColorCirculo('#ffffff');"></li>
+            <li><img src="img/takis_original.png" alt="" class="max" onclick="imgSlider('img/takis_original.png'); cambiarColorCirculo('#238343');"></li>
+            <li><img src="img/takis_volcano.png" alt="" class="max" onclick="imgSlider('img/takis_volcano.png'); cambiarColorCirculo('#ff5a09');"></li>
+        </ul>
+
+        <ul class="sci">
+            <li><a href="#"> <img src="img/twitter.png" alt=""></a></li>
+            <li><a href="#"> <img src="img/facebook.png" alt=""></a></li>
+            <li><a href="#"> <img src="img/instagram.png" alt=""></a></li>   
+        </ul>
+
+    </section>
+    <script>
+        function imgSlider(algo){
+            document.querySelector('.takis').src = algo;
+        }
+        function cambiarColorCirculo(color){
+            const circulo = document.querySelector('.circle');
+            circulo.style.background=color;
+        }
+        function menuToggle(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
